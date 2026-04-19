@@ -38,3 +38,13 @@ const teams = [
         }
 
 ]
+const groupStage = document.getElementById("group-stage")
+for (let i = 0; i <teams.length; i ++) {
+    groupStage.innerHTML += "<h2>" + teams[i].group + "</h2>"
+    groupStage.innerHTML += "<ol>";
+    for (let j = 0; j<teams[i].name.length; j++) {
+        groupStage.innerHTML+="<li>" + teams[i].name[j] + "</li>"
+
+    }
+    groupStage.innerHTML += "</ol>";
+}
