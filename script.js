@@ -40,6 +40,7 @@ const teams = [
 ]
 
 const rankings = [[], [], [], [], [], [], [], [], [], [], [], []]
+const third = []
 const groupStage = document.getElementById("group-stage")
 let html = "";
 for (let i = 0; i <teams.length; i ++) {
@@ -91,17 +92,39 @@ function pickTeam(teamName, groupIndex) {
 }
 const knockoutStage = document.getElementById("knockout-stage")
 function roundOf32 () {
-    knockoutStage.innerHTML = "<h2>Round of 32</h2>" + "<br>" + "<p>" + rankings[0][1] + " vs " + rankings[1][1] + "</p>"+
-        "<p>" + rankings[5][0] + " vs " + rankings[2][1] + "</p>"
-        +"<p>" + rankings[2][0] + " vs " + rankings[5][1] + "</p>"
+    knockoutStage.innerHTML = "<h2>Round of 32</h2>" + "<br>"
+        + "<p>" + rankings[0][1] + " vs " + rankings[1][1] + "</p>"
+        + "<p>" + rankings[5][0] + " vs " + rankings[2][1] + "</p>"
+        + "<p>" + rankings[2][0] + " vs " + rankings[5][1] + "</p>"
         + "<p>" + rankings[4][1] + " vs " + rankings[8][1] + "</p>"
         + "<p>" + rankings[10][1] + " vs " + rankings[11][1] + "</p>"
         + "<p>" + rankings[7][0] + " vs " + rankings[9][1] + "</p>"
         + "<p>" + rankings[9][0] + " vs " + rankings[7][1] + "</p>"
         + "<p>" + rankings[3][1] + " vs " + rankings[6][1] + "</p>"
+        + "<p>" + rankings[4][0] + " vs " + third[0] + "</p>"
+        + "<p>" + rankings[8][0] + " vs " + third[1] + "</p>"
+        + "<p>" + rankings[0][0] + " vs " + third[2] + "</p>"
+        + "<p>" + rankings[11][0] + " vs " + third[3] + "</p>"
+        + "<p>" + rankings[3][0] + " vs " + third[4] + "</p>"
+        + "<p>" + rankings[6][0] + " vs " + third[5] + "</p>"
+        + "<p>" + rankings[1][0] + " vs " + third[6] + "</p>"
+        + "<p>" + rankings[10][0] + " vs " + third[7] + "</p>"
 }
 function pickThird () {
+    let html3 = "<h2>Pick the 8 best 3rd placed teams</h2>"
         for (let i = 0; i < rankings.length; i++) {
-            console.log(rankings[i][2])
+            html3 += "<li id='third-" + rankings[i][2] + "'><img src='" + teams[i].images[2] + "'>" + rankings[i][2] + "<button onclick='selectThird(\"" + rankings[i][2] + "\")'> Pick </button></li>"
         }
+        knockoutStage.innerHTML = html3;
+}
+
+function selectThird(teamName){
+    if (third.length<8 && !(third.includes(teamName))) {
+        third.push(teamName)
+        const thirdElement = document.getElementById("third-" + teamName)
+        thirdElement.style.border = "2px solid green"
+    }
+    if (third.length === 8) {
+        roundOf32()
+    }
 }
