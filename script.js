@@ -43,7 +43,8 @@ const rankings = [[], [], [], [], [], [], [], [], [], [], [], []]
 const third = []
 const groupStage = document.getElementById("group-stage")
 let html = "";
-for (let i = 0; i <teams.length; i ++) {
+for (let i = 0; i < teams.length; i++) {
+    html += "<div class='group-card'>"
     html += "<h2>" + teams[i].group + "</h2>"
     html += "<ul id='group-" + i + "'>";
     for (let j = 0; j<teams[i].name.length; j++) {
@@ -51,6 +52,7 @@ for (let i = 0; i <teams.length; i ++) {
 
     }
     html += "</ul>";
+    html += "</div>";
 }
 groupStage.innerHTML = html;
 function pickTeam(teamName, groupIndex) {
