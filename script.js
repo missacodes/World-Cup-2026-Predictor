@@ -77,4 +77,11 @@ function pickTeam(teamName, groupIndex) {
         const lastTeamElement = document.getElementById("team-" + lastTeam)
         lastTeamElement.style.border = "2px solid red"
     }
+    const allGroupsDone = rankings.every(function(group) {
+        return group.length >= 2
+    })
+
+    if (allGroupsDone) {
+        console.log("All groups done!")
+    }
 }
