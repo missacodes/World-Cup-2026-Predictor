@@ -1,0 +1,8 @@
+li img {
+    width: 40px;
+}
+li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
