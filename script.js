@@ -82,6 +82,18 @@ function pickTeam(teamName, groupIndex) {
     })
 
     if (allGroupsDone) {
-        console.log("All groups done!")
+        roundOf32()
     }
+
+}
+const knockoutStage = document.getElementById("knockout-stage")
+function roundOf32 () {
+    knockoutStage.innerHTML = "<h2>Round of 32</h2>" + "<br>" + "<p>" + rankings[0][1] + " vs " + rankings[1][1] + "</p>"+
+        "<p>" + rankings[5][0] + " vs " + rankings[2][1] + "</p>"
+        +"<p>" + rankings[2][0] + " vs " + rankings[5][1] + "</p>"
+        + "<p>" + rankings[4][1] + " vs " + rankings[8][1] + "</p>"
+        + "<p>" + rankings[10][1] + " vs " + rankings[11][1] + "</p>"
+        + "<p>" + rankings[7][0] + " vs " + rankings[9][1] + "</p>"
+        + "<p>" + rankings[9][0] + " vs " + rankings[7][1] + "</p>"
+        + "<p>" + rankings[3][1] + " vs " + rankings[6][1] + "</p>"
 }
