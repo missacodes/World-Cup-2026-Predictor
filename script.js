@@ -80,9 +80,12 @@ function pickTeam(teamName, groupIndex) {
     const allGroupsDone = rankings.every(function(group) {
         return group.length >= 2
     })
+    const allThirdDone = rankings.every(function(group) {
+        return group.length >= 3
+    })
 
-    if (allGroupsDone) {
-        roundOf32()
+    if (allThirdDone) {
+        pickThird ()
     }
 
 }
@@ -96,4 +99,9 @@ function roundOf32 () {
         + "<p>" + rankings[7][0] + " vs " + rankings[9][1] + "</p>"
         + "<p>" + rankings[9][0] + " vs " + rankings[7][1] + "</p>"
         + "<p>" + rankings[3][1] + " vs " + rankings[6][1] + "</p>"
+}
+function pickThird () {
+        for (let i = 0; i < rankings.length; i++) {
+            console.log(rankings[i][2])
+        }
 }
