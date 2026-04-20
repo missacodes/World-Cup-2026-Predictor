@@ -1,6 +1,8 @@
 # World Cup 2026 Bracket Predictor
 
 An interactive bracket predictor for the 2026 FIFA World Cup. Pick your group winners, runners-up and third place qualifiers, then follow the path to the final.
+## Live Demo
+https://missacodes.github.io/World-Cup-2026-Predictor/
 
 ## Built With
 - HTML
