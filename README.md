@@ -1,6 +1,7 @@
 # World Cup 2026 Bracket Predictor
 
-An interactive bracket predictor for the 2026 FIFA World Cup. Pick your group winners, runners-up and third place qualifiers, then follow the path to the final.
+An interactive bracket predictor for the 2026 FIFA World Cup. Drag to rank your groups, pick your best third-place teams, then pick winners all the way to the champion.
+
 ## Live Demo
 https://missacodes.github.io/World-Cup-2026-Predictor/
 
@@ -11,13 +12,11 @@ https://missacodes.github.io/World-Cup-2026-Predictor/
 
 ## Features
 - All 48 teams displayed with flags across 12 groups
-- Click to rank teams 1st–4th with colour coded borders
-- Automatic 4th place detection
+- Drag and drop to rank each group 1st to 4th, with colour-coded rank badges
 - Third place qualifier selection (pick your best 8)
-- Full Round of 32 display
-
-## In Progress
-- Round of 32 bracket visual
-- Round of 16, Quarterfinals, Semifinals, Final
+- Full knockout bracket: Round of 32, Round of 16, Quarterfinals, Semifinals, Final
 - Champion display
 
+## Tournament Dates
+June 11 to July 19, 2026
+Final: MetLife Stadium, New Jersey
