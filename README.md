@@ -21,6 +21,3 @@ https://missacodes.github.io/World-Cup-2026-Predictor/
 - Round of 16, Quarterfinals, Semifinals, Final
 - Champion display
 
-## Tournament Dates
-June 11 – July 19, 2026
-Final: MetLife Stadium, New Jersey
